@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas Seguras</h1>
+        
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn" title="Copiar senha">
+                <i class="far fa-copy"></i>
+            </button>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="length">Tamanho da senha:</label>
+                <input type="number" id="length" min="4" max="64" value="12">
+            </div>
+            
+            <div class="control-group">
+                <label><input type="checkbox" id="uppercase" checked> Letras maiúsculas (A-Z)</label>
+            </div>
+            
+            <div class="control-group">
+                <label><input type="checkbox" id="lowercase" checked> Letras minúsculas (a-z)</label>
+            </div>
+            
+            <div class="control-group">
+                <label><input type="checkbox" id="numbers" checked> Números (0-9)</label>
+            </div>
+            
+            <div class="control-group">
+                <label><input type="checkbox" id="symbols" checked> Símbolos (!@#$%^&*)</label>
+            </div>
+            
+            <button id="generate-btn">Gerar Senha</button>
+        </div>
+        
+        <div class="theme-toggle">
+            <button id="theme-btn"><i class="fas fa-moon"></i> Modo Escuro</button>
+        </div>
+    </div>
+
+    <!-- Footer com links sociais -->
+    <div class="social-footer">
+        <a href="https://github.com/WesiOliver" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/wesicley-santos-oliveira?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="mailto:wesicley.oliver@gmail.com" class="social-link email">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

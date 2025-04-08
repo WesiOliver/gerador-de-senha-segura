@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --container-bg: #fff;
+    --input-bg: #f1f3f4;
+    --button-hover: #3a5a80;
+}
+
+.dark-mode {
+    --primary-color: #6b8cae;
+    --secondary-color: #4a6fa5;
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --container-bg: #2d2d2d;
+    --input-bg: #3d3d3d;
+    --button-hover: #5a7a9c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.password-display {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#password {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+#copy-btn {
+    padding: 0 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#copy-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.control-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+#generate-btn {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+#generate-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.theme-toggle {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#theme-btn {
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#theme-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.copied {
+    background-color: #4CAF50 !important;
+}
+
+.copied::after {
+    content: "Copiado!";
+    position: absolute;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+
+/* Footer Social */
+.social-footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-6px);
+    color: var(--primary-color);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+/* Cores específicas por plataforma */
+.social-link.email i {
+    color: #D44638;
+}
+
+.social-link.github i {
+    color: #000;
+}
+
+.social-link.linkedin i {
+    color: #0077B5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-footer {
+        bottom: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .social-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .social-link i {
+        font-size: 1rem;
+    }
+}
