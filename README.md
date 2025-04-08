@@ -42,8 +42,8 @@ Projeto front-end desenvolvido com HTML, CSS e JavaScript puro para gerar senhas
 
 2. **Abra o arquivo HTML no navegador**:
 
-  Você pode abrir diretamente o arquivo index.html no navegador, clicando com o botão direito > Abrir com > Seu Navegador, ou usar a extensão Live Server do VS Code para uma melhor     
-  experiência.
+   Você pode abrir diretamente o arquivo index.html no navegador, clicando com o botão direito > Abrir com > Seu Navegador, ou usar a extensão Live Server do VS Code para uma melhor    
+   experiência.
 
 ## 📌 Aprendizados
 
